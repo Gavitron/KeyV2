@@ -12,8 +12,17 @@ $vpt = [ -51.76, -91.61, -87.33 ];
 $vpr = [ 55.00, 0.00, 25.00 ];
 $vpd = 839.47;
 
-// try a bunch of CAPS_LOCK keys at 4x size
+// single stem, offset, with one stabilizer
+    u(u=1.75)
+    dcs_row(2) 
+    box_cherry(0.3)
+    legend("CAPS LOCK", size=2.5, position=[-0,0])
+    scale(4)
+	translate_u(0,-2)
+key($stabilizers = [[6,0]],$stem_positions = [[-5, 0]]); 
 
+// try a bunch of CAPS_LOCK keys at 4x size
+/*
 // single stem, centred
     u(u=1.75)
     dcs_row(2) 
@@ -75,7 +84,7 @@ key();
     scale(4)
     translate_u(0,-5)
 key(); 
-
+*/
 // test all the stems
 /*
 test_stems = ["cherry", "rounded_cherry", "box_cherry", "alps",  "cherry_stabilizer", "filled", "custom"];
