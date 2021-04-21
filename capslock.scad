@@ -8,18 +8,26 @@
 include <./includes.scad>
 
 // set viewport
-$vpt = [ -51.76, -91.61, -87.33 ];
-$vpr = [ 55.00, 0.00, 25.00 ];
-$vpd = 839.47;
+// $vpt = [ -51.76, -91.61, -87.33 ];
+// $vpr = [ 55.00, 0.00, 25.00 ];
+// $vpd = 839.47;
 
-// single stem, offset, with one stabilizer
+
+$vpt = [ 17.46, -8.10, 3.50 ];
+$vpr = [ 42.40, 0.00, 29.20 ];
+$vpd = 446.13;
+
+
+$stem_support_type = "disabled"; // [tines, brim, disabled]
+// CAPS width, with two stabilizers
     u(u=1.75)
     dcs_row(2) 
     box_cherry(0.3)
     legend("CAPS LOCK", size=2.5, position=[-0,0])
+    stabilized(mm=12, vertical = false, type="cherry_stabilizer")
     scale(4)
-	translate_u(0,-2)
-key($stabilizers = [[6,0]],$stem_positions = [[-5, 0]]); 
+    //translate_u(0,-3)
+key();
 
 // try a bunch of CAPS_LOCK keys at 4x size
 /*
